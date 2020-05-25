@@ -1,12 +1,8 @@
 package com.yutu;
 
-import com.yutu.controller.CenterManager;
-import com.yutu.controller.HomeController;
+import com.yutu.controller.ThreadPoolController;
 import com.yutu.entity.ConfigConstants;
 import com.yutu.utils.PropertiesUtils;
-
-import java.io.IOException;
-import java.util.Properties;
 
 public class YutuApplication {
 
@@ -15,12 +11,8 @@ public class YutuApplication {
         runConfigConstants();
 
         //开始计算程序
-        CenterManager centerManager = new CenterManager() {
-            @Override
-            public void mainStart() {
-                super.mainStart();
-            }
-        };
+        ThreadPoolController threadPoolController = new ThreadPoolController();
+        threadPoolController.run();
     }
 
     /**
