@@ -46,7 +46,7 @@ public class ConfigConstants {
      * @Date: 2020/5/25 11:52
      * @Description:
      **/
-    public static String REDIS_PORT;
+    public static Integer REDIS_PORT;
     /**
      * @Author: zhaobc
      * @Date: 2020/5/25 11:52

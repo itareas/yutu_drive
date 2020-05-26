@@ -46,7 +46,7 @@ public class MyTaskController implements Runnable {
      **/
     public void runDrive(MsgPack msgPack) {
         //查看线程名称
-        logger.info("=======================>线程："+Thread.currentThread().getName()+";   运行模型");
+        logger.info("=======================>线程："+Thread.currentThread().getName()+";   运行模型:"+msgPack.getData());
         try {
             int sleepDate=(int) (Math.random() * 8999) + 3000;
             Thread.sleep(sleepDate);

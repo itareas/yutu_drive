@@ -3,6 +3,7 @@ package com.yutu;
 import com.yutu.controller.ThreadPoolController;
 import com.yutu.entity.ConfigConstants;
 import com.yutu.utils.PropertiesUtils;
+import com.yutu.utils.RedisUtils;
 
 public class YutuApplication {
 
@@ -29,7 +30,7 @@ public class YutuApplication {
         ConfigConstants.MYSQL_USERNAME = PropertiesUtils.get("mysql.datasource.username");
         ConfigConstants.MYSQL_PASSWORD = PropertiesUtils.get("mysql.datasource.password");
         ConfigConstants.REDIS_HOST = PropertiesUtils.get("redis.host");
-        ConfigConstants.REDIS_PORT = PropertiesUtils.get("redis.port");
+        ConfigConstants.REDIS_PORT =Integer.parseInt(PropertiesUtils.get("redis.port"));
         ConfigConstants.REDIS_PASSWORD = PropertiesUtils.get("redis.password");
         ConfigConstants.THREAD_TUYPE = PropertiesUtils.get("thread_type");
         ConfigConstants.THREAD_SWITCH = PropertiesUtils.get("thread_switch").equals("true");

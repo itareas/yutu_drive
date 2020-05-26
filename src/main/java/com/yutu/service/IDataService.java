@@ -50,4 +50,12 @@ public interface IDataService {
      * @Description: 更新状态  并修改结果信息
      **/
     int updateProgress(String sessionId, double value);
+
+
+    /**
+    * @Author: zhaobc
+    * @Date: 2020/5/26 15:49
+    * @Description: 获得队列信息
+    **/
+    String getQueue(String key);
 }

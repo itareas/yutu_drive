@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * @Author: zhaobc
  * @Date: 2020/5/25 16:23
- * @Description:
+ * @Description: mysql数据库版任务获取
  */
 public interface IDatabaseDao {
     /**

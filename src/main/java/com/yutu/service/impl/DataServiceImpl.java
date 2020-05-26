@@ -3,6 +3,7 @@ package com.yutu.service.impl;
 import com.yutu.dao.IDatabaseDao;
 import com.yutu.dao.impl.DatabaseDaoImpl;
 import com.yutu.service.IDataService;
+import com.yutu.utils.RedisUtils;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -45,5 +46,10 @@ public class DataServiceImpl implements IDataService {
     @Override
     public int updateProgress(String sessionId, double value) {
         return databaseDao.updateProgress(sessionId,value);
+    }
+
+    @Override
+    public String getQueue(String key) {
+       return RedisUtils.lpop(key);
     }
 }
