@@ -49,7 +49,7 @@ public class ThreadPoolController {
         long keepAliveTime = 600;
         //时间单位
         TimeUnit unit = TimeUnit.SECONDS;
-        //队列总数10000
+        //设置了最高1000个队列  一次性不能赋值过多，否认不进行缓存
         workQueue = new ArrayBlockingQueue<>(1024);
         //线程池创建线程使用的工厂
         ThreadFactory threadFactory = new MyThreadFactory();
